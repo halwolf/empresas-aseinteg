@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -19,10 +18,13 @@ jobs:
           node-version: 20
 
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm --version
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install dependencies (verbose)
+        run: pnpm install --frozen-lockfile --reporter=ndjson
 
-      - name: Build Astro
-        run: pnpm build
+      - name: Build Astro (verbose)
+        run: pnpm build --reporter=ndjson
