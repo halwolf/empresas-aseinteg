@@ -1,16 +1,20 @@
 ---
-
+import Clientes from "../components/main/Clientes.astro";
+import Confianza from "../components/main/Confianza.astro";
+import Cta from "../components/main/Cta.astro";
+import Hero from "../components/main/Hero.astro";
+import Problema from "../components/main/Problema.astro";
+import Proceso from "../components/main/Proceso.astro";
+import Servicios from "../components/main/Servicios.astro";
+import MainLayout from "../Layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+	<Hero />
+	<Confianza />
+	<Problema />
+	<Servicios />
+	<Proceso />
+	<Clientes />
+	<Cta />
+</MainLayout>

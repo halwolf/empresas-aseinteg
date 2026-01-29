@@ -1,0 +1,106 @@
+---
+import "../styles/global.css";
+
+import { Image } from "astro:assets";
+
+import Logo from "../common/logo.svg";
+import { pages } from "../common/variables.astro";
+---
+
+<header class="sticky top-0 z-50 w-full bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="h-14 w-auto overflow-hidden">
+                <Image
+                    alt="ASEINTEG LTDA Logo"
+                    class="w-full h-full object-contain"
+                    src={Logo}
+                />
+            </div>
+            <div class="lg:block border-l border-slate-200 pl-4">
+                <h1
+                    class="text-lg font-extrabold tracking-tighter text-primary uppercase leading-tight"
+                >
+                    ASEINTEG
+                    <span class="text-slate-400 font-light">LTDA</span>
+                </h1>
+                <p
+                    class="text-[10px] font-bold text-secondary uppercase tracking-widest leading-none"
+                >
+                    Vigilancia y Seguridad Privada
+                </p>
+            </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            {
+                pages.map((page) => (
+                    <a
+                        class="text-sm font-bold text-slate-600 hover:text-primary transition-colors uppercase tracking-wide"
+                        href={page.path}
+                    >
+                        {page.name}
+                    </a>
+                ))
+            }
+        </nav>
+        <div class="md:flex items-center gap-10">
+            <a
+                class="bg-primary hover:bg-dark-green text-white px-6 py-2.5 rounded text-sm font-black uppercase tracking-wider transition-all"
+                href="/contacto"
+            >
+                Contactar Ahora
+            </a>
+        </div>
+        <div class="md:hidden flex items-center">
+            <input class="peer hidden" id="menu-toggle" type="checkbox" />
+            <label
+                class="cursor-pointer p-2 text-custom-green hover:bg-gray-100 rounded-lg transition-colors z-30"
+                for="menu-toggle"
+            >
+                <span
+                    class="material-symbols-outlined text-3xl block peer-checked:hidden"
+                    >menu</span
+                >
+            </label>
+            <div
+                class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 ease-in-out peer-checked:translate-x-0 z-40 md:hidden flex flex-col pt-24 px-8"
+            >
+                <label
+                    class="absolute top-6 right-6 cursor-pointer text-custom-green"
+                    for="menu-toggle"
+                >
+                    <span class="material-symbols-outlined text-4xl">close</span
+                    >
+                </label>
+                <nav class="flex flex-col gap-6 text-xl font-bold">
+                    {
+                        pages.map((page) => (
+                            <a
+                                class="text-custom-text-dark hover:text-custom-green transition-colors border-b border-gray-100 pb-4"
+                                href={page.path}
+                            >
+                                {page.name}
+                            </a>
+                        ))
+                    }
+                </nav>
+            </div>
+        </div>
+        <style data-purpose="layout-tweaks">
+            .grid-item {
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .grid-item:last-child {
+                border-bottom: none;
+            }
+            @media (min-width: 768px) {
+                .grid-item:nth-last-child(-n + 2) {
+                    border-bottom: none;
+                }
+            }
+            body:has(#menu-toggle:checked) {
+                overflow: hidden;
+            }
+        </style>
+    </div>
+</header>

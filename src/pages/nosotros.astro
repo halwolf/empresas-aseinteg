@@ -1,0 +1,224 @@
+---
+import Image from "astro/components/Image.astro";
+import Hero from "../components/main/Hero.astro";
+import MainLayout from "../Layouts/MainLayout.astro";
+import institucional from "../../public/3.jpg";
+---
+
+<style>
+	.reveal {
+		opacity: 0;
+		transform: translateY(40px);
+		transition: all 0.8s ease-out;
+	}
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+</style>
+<MainLayout>
+	<!-- ======================================================
+     HERO – QUIÉNES SOMOS
+======================================================= -->
+	<section class="bg-[var(--color-background-dark)] text-white">
+		<div class="max-w-7xl mx-auto px-6 py-24 reveal">
+			<h1 class="text-4xl font-bold">Quiénes Somos</h1>
+			<p class="mt-4 max-w-2xl text-slate-300">
+				Más de 24 años brindando seguridad privada integral con respaldo legal,
+				supervisión permanente y operación 24/7.
+			</p>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     NUESTRA ESENCIA
+======================================================= -->
+	<section>
+		<div
+			class="max-w-7xl mx-auto px-6 py-20 grid gap-12 lg:grid-cols-2 items-center"
+		>
+			<div class="reveal">
+				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+					Seguridad privada con respaldo real
+				</h2>
+				<p class="mt-6 text-slate-600">
+					ASEINTEG LTDA es una empresa colombiana de vigilancia y seguridad
+					privada integral, vigilada por la Superintendencia de Vigilancia y
+					Seguridad Privada, con operación continua 24/7.
+				</p>
+				<p class="mt-4 text-slate-600">
+					Diseñamos esquemas de protección para sectores residenciales,
+					comerciales, industriales e institucionales, combinando talento humano
+					calificado, supervisión constante y tecnología autorizada.
+				</p>
+			</div>
+
+			<div
+				class="reveal rounded-2xl bg-white border border-slate-200 h-72 flex items-center justify-center"
+			>
+				<Image
+					src={institucional}
+					class="h-full w-full object-cover"
+					alt="Imagen institucional"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     HISTORIA Y TRAYECTORIA
+======================================================= -->
+	<section class="bg-white">
+		<div class="max-w-7xl mx-auto px-6 py-20 reveal">
+			<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+				Nuestra trayectoria
+			</h2>
+
+			<p class="mt-6 max-w-3xl text-slate-600">
+				Somos la única empresa de seguridad privada fundada y con sede principal
+				en la ciudad de Girardot, con presencia regional y cobertura operativa
+				certificada.
+			</p>
+
+			<p class="mt-4 max-w-3xl text-slate-600">
+				Durante más de dos décadas hemos acompañado el desarrollo de proyectos
+				residenciales, comerciales y empresariales, generando empleo formal y
+				construyendo relaciones de confianza con clientes y autoridades.
+			</p>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     MISIÓN Y VISIÓN
+======================================================= -->
+	<section>
+		<div class="max-w-7xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-2">
+			<div class="reveal rounded-2xl bg-white border border-slate-200 p-8">
+				<h3 class="text-xl font-semibold text-[var(--color-primary)]">
+					Nuestra misión
+				</h3>
+				<p class="mt-4 text-slate-600">
+					Proteger la vida, la integridad personal y los bienes de nuestros
+					clientes mediante servicios de vigilancia privada integral, procesos
+					de calidad y supervisión permanente.
+				</p>
+			</div>
+
+			<div class="reveal rounded-2xl bg-white border border-slate-200 p-8">
+				<h3 class="text-xl font-semibold text-[var(--color-primary)]">
+					Nuestra visión
+				</h3>
+				<p class="mt-4 text-slate-600">
+					Consolidarnos como una empresa líder en seguridad privada, reconocida
+					por la legalidad de nuestras operaciones, la calidad del servicio y la
+					capacidad de anticiparnos a los riesgos.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     DIFERENCIALES
+======================================================= -->
+	<section class="bg-[var(--color-background-dark)] text-white">
+		<div class="max-w-7xl mx-auto px-6 py-20">
+			<h2 class="text-3xl font-bold text-center reveal">
+				Lo que nos diferencia
+			</h2>
+
+			<div class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-center">
+				<div class="reveal">24+ años de experiencia</div>
+				<div class="reveal">Licencia vigente por 10 años</div>
+				<div class="reveal">Certificación ISO 9001</div>
+				<div class="reveal">Supervisión motorizada 24/7</div>
+				<div class="reveal">Sede propia</div>
+				<div class="reveal">Personal certificado</div>
+				<div class="reveal">Relación con autoridades</div>
+				<div class="reveal">Pólizas activas</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- ======================================================
+     TALENTO HUMANO
+======================================================= -->
+	<section>
+		<div class="max-w-7xl mx-auto px-6 py-20 reveal">
+			<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+				Nuestro talento humano
+			</h2>
+
+			<p class="mt-6 max-w-3xl text-slate-600">
+				Nuestro equipo está conformado por personal administrativo, supervisores
+				y guardas de seguridad altamente calificados, incluyendo oficiales y
+				suboficiales en uso de buen retiro.
+			</p>
+
+			<ul class="mt-6 space-y-3 text-slate-600">
+				<li>✔ Procesos rigurosos de selección</li>
+				<li>✔ Evaluaciones médicas y psicológicas</li>
+				<li>✔ Capacitación continua</li>
+				<li>✔ Contratos legales y bienestar laboral</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     LEGALIDAD Y RESPALDO
+======================================================= -->
+	<section class="bg-white">
+		<div class="max-w-7xl mx-auto px-6 py-20 reveal">
+			<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+				Legalidad y respaldo
+			</h2>
+
+			<p class="mt-6 max-w-3xl text-slate-600">
+				ASEINTEG LTDA es una empresa vigilada por la Superintendencia de
+				Vigilancia y Seguridad Privada, con licencias vigentes, certificación
+				ISO 9001 y pólizas activas que respaldan cada operación.
+			</p>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     CTA FINAL
+======================================================= -->
+	<section class="bg-[var(--color-primary)] text-white">
+		<div class="max-w-7xl mx-auto px-6 py-16 text-center reveal">
+			<h2 class="text-3xl font-bold">
+				Conozca cómo podemos proteger su operación
+			</h2>
+			<p class="mt-4 text-emerald-100">
+				Diagnóstico profesional sin costo ni compromiso.
+			</p>
+			<a
+				href="/contacto"
+				class="inline-block mt-8 rounded-xl bg-[var(--color-accent)] px-8 py-3 font-semibold text-[var(--color-background-dark)] hover:opacity-90 transition"
+			>
+				Solicite su estudio de seguridad gratuito
+			</a>
+		</div>
+	</section>
+
+	<!-- ======================================================
+     SCRIPT – ANIMACIÓN ON-SCROLL
+======================================================= -->
+	<script>
+		const reveals = document.querySelectorAll(".reveal");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("active");
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.15 },
+		);
+
+		reveals.forEach((el) => observer.observe(el));
+	</script>
+</MainLayout>

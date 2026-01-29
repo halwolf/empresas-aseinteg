@@ -1,0 +1,59 @@
+---
+import { Debug } from "astro:components";
+interface Props {
+  icono: string;
+  imagen: string;
+  titulo: string;
+  descripcion: string;
+  caracteristicas: string[];
+}
+
+const { icono, imagen, titulo, descripcion, caracteristicas } = Astro.props;
+---
+
+<div
+  class="service-card bg-white rounded-3xl border border-emerald-300 overflow-hidden
+         shadow-[0_4px_20px_rgba(0,0,0,0.03)]
+         hover:shadow-[0_12px_45px_rgba(0,0,0,0.08)]
+         transition-all duration-300 group"
+>
+  <!-- Image -->
+  <div class="relative h-64 overflow-hidden">
+    <img
+      src={imagen}
+      alt={titulo}
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      loading="lazy"
+    />
+
+    <!-- Optional overlay icon -->
+    <div
+      class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-md opacity-90"
+    >
+      <span class="material-symbols-outlined text-2xl text-primary">
+        {icono}
+      </span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-10">
+    <h3 class="text-xl font-bold text-primary mb-4">{titulo}</h3>
+
+    <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+      {descripcion}
+    </p>
+    <ul class="space-y-3 text-sm font-medium text-slate-600">
+      {
+        caracteristicas.map((caracteristica, index) => (
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-accent text-base">
+              check_circle
+            </span>
+            {caracteristica}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

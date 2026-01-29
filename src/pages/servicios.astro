@@ -1,0 +1,324 @@
+---
+import Hero from "../components/main/Hero.astro";
+
+import MainLayout from "../Layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <!-- ======================================================
+     HERO – SERVICIOS
+======================================================= -->
+  <section class="bg-[var(--color-background-dark)] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-24 reveal">
+      <h1 class="text-4xl font-bold">Nuestros Servicios</h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        Soluciones profesionales de seguridad privada diseñadas según el nivel
+        de riesgo de su operación.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+     INTRODUCCIÓN
+======================================================= -->
+  <section>
+    <div class="max-w-7xl mx-auto px-6 py-20 reveal">
+      <h2 class="text-3xl font-bold text-[var(--color-primary)]">
+        Seguridad diseñada para su entorno
+      </h2>
+      <p class="mt-6 max-w-3xl text-slate-600">
+        Diseñamos esquemas de seguridad personalizados que combinan personal
+        certificado, supervisión constante y tecnología autorizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+     SERVICIOS – CARDS
+======================================================= -->
+  <section class="py-24 px-6 bg-white" id="soluciones">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold tracking-tight text-primary">
+          Portafolio de servicios
+        </h2>
+        <div class="h-1 w-20 bg-accent-green mx-auto mt-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="service-card bg-white p-10 rounded-3xl border border-emerald-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group m-3"
+        >
+          <span
+            class="material-symbols-outlined text-4xl text-primary mb-6 block"
+            >shield</span
+          >
+          <h3 class="text-xl font-bold text-primary mb-4">
+            Vigilancia fija 24/7
+          </h3>
+          <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+            Servicio permanente con guardas certificados y protocolos claros de
+            seguridad.
+          </p>
+          <ul class="space-y-3 text-sm font-medium text-slate-600">
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Control de accesos
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Turnos 24 horas
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Supervisión constante
+            </li>
+          </ul>
+        </div>
+        <div
+          class="service-card service-card bg-white p-10 rounded-3xl border border-emerald-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group"
+        >
+          <span
+            class="material-symbols-outlined text-4xl text-primary mb-6 block"
+            >home_work</span
+          >
+          <h3 class="text-xl font-bold text-primary mb-4">
+            Seguridad residencial
+          </h3>
+          <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+            Protección especializada para conjuntos cerrados, edificios y
+            condominios privados.
+          </p>
+          <ul class="space-y-3 text-sm font-medium text-slate-600">
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Control vehicular
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Rondas internas
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Atención de novedades
+            </li>
+          </ul>
+        </div>
+        <div
+          class="service-card service-card service-card bg-white p-10 rounded-3xl border border-emerald-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group"
+        >
+          <span
+            class="material-symbols-outlined text-4xl text-primary mb-6 block"
+            >corporate_fare</span
+          >
+          <h3 class="text-xl font-bold text-primary mb-4">
+            Seguridad empresarial
+          </h3>
+          <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+            Protección integral de activos, personal e infraestructura crítica
+            corporativa.
+          </p>
+          <ul class="space-y-3 text-sm font-medium text-slate-600">
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Control perimetral
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Protección de inventarios
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Continuidad operativa
+            </li>
+          </ul>
+        </div>
+        <div
+          class="service-card service-card service-card bg-white p-10 rounded-3xl border border-emerald-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group"
+        >
+          <span
+            class="material-symbols-outlined text-4xl text-primary mb-6 block"
+            >moped</span
+          >
+          <h3 class="text-xl font-bold text-primary mb-4">
+            Supervisión motorizada
+          </h3>
+          <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+            Control operativo permanente y unidades de reacción inmediata con
+            apoyo logístico.
+          </p>
+          <ul class="space-y-3 text-sm font-medium text-slate-600">
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Respuesta rápida
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Patrullaje preventivo
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Apoyo táctico
+            </li>
+          </ul>
+        </div>
+        <!-- Service Card -->
+        <div
+          class="service-card bg-white rounded-3xl border border-emerald-300 overflow-hidden
+         shadow-[0_4px_20px_rgba(0,0,0,0.03)]
+         hover:shadow-[0_12px_45px_rgba(0,0,0,0.08)]
+         transition-all duration-300 group"
+        >
+          <!-- Image -->
+          <div class="relative h-48 overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="Seguridad electrónica"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            <!-- Optional overlay icon -->
+            <div
+              class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm
+             rounded-xl p-3 shadow-md"
+            >
+              <span class="material-symbols-outlined text-2xl text-primary">
+                videocam
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-10">
+            <h3 class="text-xl font-bold text-primary mb-4">
+              Seguridad electrónica
+            </h3>
+
+            <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+              Sistemas de CCTV, control de accesos y alarmas tecnológicas de
+              última generación.
+            </p>
+
+            <ul class="space-y-3 text-sm font-medium text-slate-600">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent text-base">
+                  check_circle
+                </span>
+                Monitoreo remoto
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent text-base">
+                  check_circle
+                </span>
+                Mantenimiento técnico
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent text-base">
+                  check_circle
+                </span>
+                Detección inteligente
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="service-card service-card service-card bg-white p-10 rounded-3xl border border-emerald-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group"
+        >
+          <span
+            class="material-symbols-outlined text-4xl text-primary mb-6 block"
+            >person_shield</span
+          >
+          <h3 class="text-xl font-bold text-primary mb-4">
+            Escoltas autorizados
+          </h3>
+          <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+            Protección personalizada de personas y transporte de mercancías
+            críticas.
+          </p>
+          <ul class="space-y-3 text-sm font-medium text-slate-600">
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Protección ejecutiva
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Custodia de carga
+            </li>
+            <li>
+              <span class="material-symbols-outlined list-check"
+                >check_circle</span
+              >Vehículos blindados
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+     CTA FINAL
+======================================================= -->
+  <section class="bg-[var(--color-primary)] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 text-center reveal">
+      <h2 class="text-3xl font-bold">
+        Solicite su estudio de seguridad gratuito
+      </h2>
+      <p class="mt-4 text-emerald-100">
+        Diagnóstico profesional sin compromiso.
+      </p>
+      <a
+        href="/contacto"
+        class="inline-block mt-8 rounded-xl bg-[var(--color-accent)] px-8 py-3 font-semibold text-[var(--color-background-dark)] hover:opacity-90 transition"
+      >
+        Contáctenos
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================================================
+     SCRIPT – ANIMACIÓN
+======================================================= -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+
+    reveals.forEach((el) => observer.observe(el));
+  </script>
+</MainLayout>

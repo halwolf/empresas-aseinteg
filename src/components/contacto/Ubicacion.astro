@@ -1,0 +1,33 @@
+---
+
+import { Leaflet, CreateLeafletIcon } from "astro-leaflet";
+import type {
+  AstroLeafletOptionsType,
+  AstroLeafletMarkerType,
+} from "astro-leaflet";
+
+const markers: AstroLeafletMarkerType[] = [];
+markers.push({ latlng: [4.307405, -74.799535], options: { title: "ASEINTEG Ltda." } });
+
+const options: AstroLeafletOptionsType = {
+  tileByName: "Google&type=street",
+  center: [4.307405, -74.799535],
+  zoom: 17,
+  tileLayerOptions: {
+    attribution: "Map data &copy; Google",
+  },
+  markers: markers,
+};
+---
+
+<CreateLeafletIcon
+  name="myicon-name"
+  options={{ className: "leaflet-icon-myicon", iconSize: [20, 20] }}
+/>
+<Leaflet id="mapa" options={options} />
+
+<style is:global>
+  #mapa {
+    height: -webkit-fill-available !important;
+  }
+</style>

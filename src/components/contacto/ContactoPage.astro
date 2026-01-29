@@ -1,0 +1,163 @@
+---
+import Ubicacion from "./Ubicacion.astro";
+---
+
+<section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid gap-12 lg:grid-cols-2">
+        <!-- Formulario -->
+        <div class="rounded-2xl border p-8 shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-900">
+                Solicite su estudio de seguridad gratuito
+            </h2>
+
+            <p class="mt-2 text-slate-600 text-sm">
+                Complete el formulario y uno de nuestros asesores se comunicará
+                con usted.
+            </p>
+
+            <form class="mt-8 space-y-5">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Nombre completo
+                    </label>
+                    <input
+                        type="text"
+                        class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                        placeholder="Ingrese su nombre"
+                    />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Empresa / Conjunto
+                    </label>
+                    <input
+                        type="text"
+                        class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                        placeholder="Nombre de la empresa o conjunto"
+                    />
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">
+                            Teléfono
+                        </label>
+                        <input
+                            type="tel"
+                            class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                            placeholder="Número de contacto"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">
+                            Correo electrónico
+                        </label>
+                        <input
+                            type="email"
+                            class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                            placeholder="correo@empresa.com"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Tipo de servicio
+                    </label>
+                    <select
+                        class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                    >
+                        <option>Seleccione una opción</option>
+                        <option>Vigilancia fija 24/7</option>
+                        <option>Seguridad residencial</option>
+                        <option>Seguridad comercial / industrial</option>
+                        <option>Supervisión motorizada</option>
+                        <option>Seguridad electrónica</option>
+                        <option>Estudio de seguridad</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Mensaje
+                    </label>
+                    <textarea
+                        rows="4"
+                        class="mt-1 w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                        placeholder="Cuéntenos brevemente su necesidad"
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full rounded-xl bg-emerald-600 py-3 font-semibold text-white hover:bg-emerald-500 transition"
+                >
+                    Enviar solicitud
+                </button>
+
+                <p class="text-xs text-slate-500 text-center">
+                    * No compartimos su información con terceros.
+                </p>
+            </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div>
+            <h2 class="text-2xl font-bold text-slate-900">
+                Información de contacto
+            </h2>
+
+            <ul class="mt-6 space-y-4 text-slate-600 text-sm">
+                <li>
+                    📍 <strong>Sede principal:</strong><br />
+                    Diagonal 8 No. 32-07<br />
+                    Barrio Blanco – Girardot, Cundinamarca
+                </li>
+
+                <li>
+                    📞 <strong>Teléfono:</strong><br />
+                    (601) 888 49 63
+                </li>
+
+                <li>
+                    📱 <strong>Móviles:</strong><br />
+                    315 326 3384 · 316 527 9395 · 317 426 9544
+                </li>
+
+                <li>
+                    ✉️ <strong>Correo:</strong><br />
+                    aseintegspecial@hotmail.com
+                </li>
+
+                <li>
+                    🕒 <strong>Horario:</strong><br />
+                    Atención y operación 24/7
+                </li>
+            </ul>
+
+            <!-- Legal -->
+            <div class="mt-10 rounded-xl bg-slate-50 p-6 border">
+                <h3 class="font-semibold text-slate-900">Respaldo legal</h3>
+                <p class="mt-2 text-sm text-slate-600">
+                    Empresa vigilada por la Superintendencia de Vigilancia y
+                    Seguridad Privada, con licencias vigentes y pólizas activas.
+                </p>
+            </div>
+            <div id="map-container" class="mt-10 rounded-xl bg-slate-50 p-6 border h-60" onclick="openMap()">
+                <Ubicacion />
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const mapaDiv = document.getElementById("map-container") ;
+    if(mapaDiv){
+        mapaDiv.style.cursor = "pointer";
+        mapaDiv.title = "Haga clic para abrir en Google Maps";
+        mapaDiv.onclick = function() {
+            window.open("https://www.google.com/maps/place/4%C2%B018'26.5%22N+74%C2%B047'58.6%22W/@4.3076335,-74.7994582,19.49z/data=!4m4!3m3!8m2!3d4.307347!4d-74.799607?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D", "_blank");
+        };
+    }
+</script>

@@ -1,0 +1,41 @@
+---
+import { pasos } from "../../common/variables.astro";
+---
+
+<section class="py-24 border-y overflow-hidden bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 space-y-4">
+      <h2 class="text-4xl font-bold tracking-tight text-slate-50">
+        Nuestro Proceso Táctico
+      </h2>
+      <p class="text-slate-200 max-w-2xl mx-auto text-lg">
+        Un protocolo técnico y estructurado para garantizar su seguridad
+        integral.
+      </p>
+    </div>
+    <div class="relative">
+      <div
+        class="absolute top-1/4 left-[15%] right-[15%] h-px border-t-2 border-dashed border-slate-200 hidden lg:block z-0"
+      >
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
+        {
+          pasos.map((paso) => (
+            <div class="flex flex-col items-center text-center">
+              <div class="process-badge bg-secondary text-slate-300">{paso.step}</div>
+              <div class="w-16 h-16 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center mb-6 shadow-sm">
+                <span class="material-symbols-outlined text-3xl text-primary">
+                  {paso.icon}
+                </span>
+              </div>
+              <h3 class="font-bold text-xl mb-3 text-stone-50">{paso.title}</h3>
+              <p class="text-sm text-slate-200 leading-relaxed font-medium px-4">
+                {paso.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

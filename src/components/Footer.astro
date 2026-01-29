@@ -1,0 +1,80 @@
+---
+import "../styles/global.css";
+import Logo from "../common/logo.svg";
+
+import { Image } from "astro:assets";
+import { servicios } from "../common/variables.astro";
+---
+
+<footer class="bg-white border-t border-[#e9f1ed] pt-16 pb-8">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+      <!--First col -->
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+          <div class="text-primary size-7">
+            <Image alt="Logo ASEINTEG" src={Logo} />
+          </div>
+          <h2 class="text-xl font-bold tracking-tight">ASEINTEG LTDA</h2>
+        </div>
+        <p class="text-secondary text-sm leading-relaxed">
+          Empresa colombiana con 24 años de experiencia, especializada en
+          protección de personas, bienes e infraestructuras críticas.
+        </p>
+        <p class="text-secondary text-sm leading-relaxed">
+          Operación 24/7 con licencia vigente de la Superintendencia de
+          Vigilancia y Seguridad Privada.
+        </p>
+      </div>
+      <!--Servicios -->
+      <div>
+        <div>
+          <h4 class="font-bold mb-6">Servicios</h4>
+          <ul class="flex flex-col gap-4 text-sm font-medium text-secondary">
+            {servicios.map((servicio) => <li>{servicio}</li>)}
+          </ul>
+        </div>
+      </div>
+      <!--Contacto -->
+      <div>
+        <h4 class="font-bold mb-6">Contacto</h4>
+        <ul class="flex flex-col gap-4 text-sm font-medium text-secondary">
+          <li>
+            📍 Diagonal 8 No. 32-07<br />
+            Barrio Blanco – Girardot, Cundinamarca
+          </li>
+          <li>📞 (601) 888 49 63</li>
+          <li>📱 315 326 3384 · 316 527 9395</li>
+          <li>✉️ aseintegspecial@hotmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-[#e9f1ed]pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-secondary"
+    >
+      <div class="text-xs leading-relaxed">
+        <p>
+          Empresa vigilada por la
+          <span class="text-primary font-medium">
+            Superintendencia de Vigilancia y Seguridad Privada. 
+          </span>
+        </p>
+        <p class="mt-1">
+          Licencias vigentes · Certificación ISO 9001 · Pólizas activas
+        </p>
+        <p class="mt-2">
+          © 2026 ASEINTEG LTDA. Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="md:text-right">
+        <a
+          href="/contacto"
+          class="inline-flex items-center justify-center rounded bg-primary px-6 py-2.5 text-sm font-semibold text-white hover:bg-accent transition hover:bg-dark-green tracking-wider invisible md:visible"
+        >
+          Solicite su estudio de seguridad gratuito
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
