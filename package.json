@@ -16,6 +16,7 @@
     "astro-leaflet": "^1.8.1",
     "astro-splide": "^2.0.2",
     "install": "^0.13.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18"
   }
 }
