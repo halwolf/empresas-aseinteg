@@ -1,4 +1,4 @@
-name: Test Astro Build (pnpm)
+name: Test Astro Build (pnpm + Node 24)
 
 on:
   push:
@@ -12,19 +12,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node 24
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Enable Corepack
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
           pnpm --version
+          node --version
 
-      - name: Install dependencies (verbose)
-        run: pnpm install --frozen-lockfile --reporter=ndjson
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
-      - name: Build Astro (verbose)
-        run: pnpm build --reporter=ndjson
+      - name: Build Astro
+        run: pnpm build
