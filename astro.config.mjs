@@ -4,6 +4,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://halwolf.github.io',
+  output: 'static',
   vite: {
     optimizeDeps:{
       include: ['astro-leaflet > leaflet'],
