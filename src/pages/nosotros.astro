@@ -1,6 +1,5 @@
 ---
 import Image from "astro/components/Image.astro";
-import Hero from "../components/main/Hero.astro";
 import MainLayout from "../Layouts/MainLayout.astro";
 import institucional from "../../public/3.jpg";
 ---
@@ -23,10 +22,6 @@ import institucional from "../../public/3.jpg";
 	<section class="bg-[var(--color-background-dark)] text-white">
 		<div class="max-w-7xl mx-auto px-6 py-24 reveal">
 			<h1 class="text-4xl font-bold">Quiénes Somos</h1>
-			<p class="mt-4 max-w-2xl text-slate-300">
-				Más de 25 años brindando seguridad privada integral con respaldo legal,
-				supervisión permanente y operación 24/7.
-			</p>
 		</div>
 	</section>
 
@@ -81,15 +76,11 @@ import institucional from "../../public/3.jpg";
 				</h2>
 
 				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
-					<strong>ASEINTEG LTDA</strong> nace en la ciudad de Girardot como una empresa de
-					seguridad privada con visión de crecimiento, consolidando una
-					operación que hoy atiende proyectos en distintos puntos del país.
+					<strong>ASEINTEG LTDA</strong> nace en la ciudad de Girardot y consolida una trayectoria de más de dos décadas en el sector de la seguridad privada, ampliando progresivamente su operación hasta atender proyectos en distintas regiones del país.
 				</p>
 
 				<p class="mt-4 max-w-xl text-slate-600 leading-relaxed">
-					Durante más de dos décadas hemos acompañado desarrollos residenciales,
-					comerciales y empresariales, generando empleo formal y construyendo
-					relaciones de confianza sostenidas con clientes y autoridades.
+					Durante este tiempo hemos acompañado desarrollos residenciales, comerciales e institucionales, generando empleo formal y construyendo relaciones de confianza sostenidas con clientes y autoridades.
 				</p>
 			</div>
 
@@ -97,7 +88,7 @@ import institucional from "../../public/3.jpg";
 			<div class="relative">
 				<img
 					src="/quienessomos/historia.jpg"
-					alt="Trayectoria en seguridad privada"
+					alt="Historia"
 					class="w-full h-full max-h-[420px] object-cover rounded-3xl shadow-lg"
 					loading="lazy"
 				/>
@@ -160,8 +151,41 @@ import institucional from "../../public/3.jpg";
 			<div class="relative">
 				<img
 					src="/quienessomos/talento.jpg"
-					alt="Trayectoria en seguridad privada"
+					alt="Talento"
 					class="w-full h-full max-h-[420px] object-cover object-[80%_70%] rounded-3xl shadow-lg"
+					loading="lazy"
+				/>
+			</div>
+		</div>
+	</section>
+	<!-- ======================================================
+     VALORES
+======================================================= -->
+	<section class="bg-white">
+		<div
+			class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal"
+		>
+			<!-- Content -->
+			<div>
+				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+					Nuestros valores
+				</h2>
+
+				<ul class="mt-6 space-y-3 text-slate-600">
+					<li>✔ Compromiso con el cumplimiento legal</li>
+					<li>✔ Responsabilidad operativa</li>
+					<li>✔ Ética profesional</li>
+					<li>✔ Mejora continua</li>
+					<li>✔ Trabajo en equipo</li>
+				</ul>
+			</div>
+
+			<!-- Image -->
+			<div class="relative">
+				<img
+					src="/quienessomos/valores.jpg"
+					alt="Valores"
+					class="w-full h-full max-h-[420px] object-cover object-center rounded-3xl shadow-lg"
 					loading="lazy"
 				/>
 			</div>
