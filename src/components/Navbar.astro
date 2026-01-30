@@ -43,12 +43,20 @@ import { pages } from "../common/variables.astro";
                 ))
             }
         </nav>
-        <div class="md:flex items-center gap-10">
+        <div class="md:flex items-center justify-center gap-10">
             <a
-                class="bg-primary hover:bg-dark-green text-white px-6 py-2.5 rounded text-sm font-black uppercase tracking-wider transition-all"
+                class="bg-primary hover:bg-dark-green text-white px-6 py-5 md:py-2.5 rounded text-sm font-black uppercase tracking-wider transition-all flex items-center justify-center md:gap-2"
                 href="/contacto"
             >
-                Contactar Ahora
+                <span
+                    class="material-symbols-outlined text-2xl leading-none flex items-center justify-center"
+                >
+                    phone
+                </span>
+
+                <span class="hidden md:inline text-sm font-medium leading-none">
+                    Contáctenos
+                </span>
             </a>
         </div>
         <div class="md:hidden flex items-center">
