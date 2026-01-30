@@ -12,14 +12,14 @@ import Card from "./Card.astro";
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        serviciosPrincipal.map((servicio) => (
-          console.log(servicio),
+        serviciosPrincipal.map((servicio) => (          
           <Card
             icono={servicio.icono}
             imagen={servicio.imagen}
             titulo={servicio.titulo}
             descripcion={servicio.descripcion}
             caracteristicas={servicio.caracteristicas}
+            ubicacion={servicio.ubicacion}
           />
         ))
       }

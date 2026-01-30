@@ -6,9 +6,10 @@ interface Props {
   titulo: string;
   descripcion: string;
   caracteristicas: string[];
+  ubicacion: string;
 }
 
-const { icono, imagen, titulo, descripcion, caracteristicas } = Astro.props;
+const { icono, imagen, titulo, descripcion, caracteristicas, ubicacion } = Astro.props;
 ---
 
 <div
@@ -22,7 +23,7 @@ const { icono, imagen, titulo, descripcion, caracteristicas } = Astro.props;
     <img
       src={imagen}
       alt={titulo}
-      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      class={`transition-transform duration-500 group-hover:scale-105 w-full h-full ${ubicacion}`}
       loading="lazy"
     />
 
