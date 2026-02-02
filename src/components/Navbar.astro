@@ -9,7 +9,7 @@ import { pages } from "../common/variables.astro";
 
 <header class="sticky top-0 z-50 w-full bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-4">
+        <a class="flex items-center gap-4" href="/">
             <div class="h-14 w-auto overflow-hidden">
                 <Image
                     alt="ASEINTEG LTDA Logo"
@@ -30,7 +30,7 @@ import { pages } from "../common/variables.astro";
                     Vigilancia y Seguridad Privada
                 </p>
             </div>
-        </div>
+        </a>
         <nav class="hidden md:flex items-center gap-8">
             {
                 pages.map((page) => (

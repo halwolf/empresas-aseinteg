@@ -1,6 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
-import MainLayout2 from "../Layouts/MainLayout2.astro";
+import MainLayout from "../Layouts/MainLayout.astro";
 import institucional from "../../public/3.jpg";
 ---
 
@@ -15,7 +15,7 @@ import institucional from "../../public/3.jpg";
 		transform: translateY(0);
 	}
 </style>
-<MainLayout2>
+<MainLayout title="Quiénes Somos | Empresa de seguridad privada con operación nacional | ASEINTEG LTDA" description="Conozca la historia, misión, visión y valores de ASEINTEG LTDA, una empresa colombiana con más de 25 años de experiencia en seguridad privada." canonical="/nosotros" showFooter={false}>
 	<!-- ======================================================
      HERO – QUIÉNES SOMOS
 ======================================================= -->
@@ -73,7 +73,7 @@ import institucional from "../../public/3.jpg";
 				</h2>
 
 				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
-					<strong>ASEINTEG LTDA</strong> inició operaciones en Girardot y, gracias a metodologías claras y experiencia acumulada, ha expandido su alcance a lo largo del territorio colombiano, atendiendo distintas regiones con la misma consistencia operativa.
+					<strong>ASEINTEG LTDA</strong> inició operaciones en Girardot. Gracias a metodologías claras y experiencia acumulada, ha expandido su alcance a lo largo del territorio colombiano, atendiendo distintas regiones con la misma consistencia operativa.
 				</p>
 			</div>
 
@@ -242,4 +242,4 @@ import institucional from "../../public/3.jpg";
 
 		reveals.forEach((el) => observer.observe(el));
 	</script>
-</MainLayout2>
+</MainLayout>

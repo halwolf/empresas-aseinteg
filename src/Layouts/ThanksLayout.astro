@@ -3,14 +3,21 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Footer2 from "../components/Footer2.astro";
+
+const { title, description, canonical, showFooter } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -31,11 +38,8 @@ import Footer2 from "../components/Footer2.astro";
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <title>ASEINTEG LTDA</title>
   </head>
   <body>
-    <Navbar />
     <slot />
-    <Footer2 />
   </body>
 </html>

@@ -1,0 +1,55 @@
+---
+import ThanksLayout from "../Layouts/ThanksLayout.astro";
+---
+
+<ThanksLayout
+  title="Gracias por contactarnos | ASEINTEG LTDA"
+  description="Hemos recibido tu información. Uno de nuestros asesores se comunicará contigo en el menor tiempo posible."
+  canonical="/gracias"
+>
+  <section
+    class="min-h-[70vh] flex items-center justify-center bg-[var(--color-background-light)]"
+  >
+    <div
+      class="max-w-xl text-center bg-white p-10 rounded-3xl shadow-md border border-emerald-200"
+    >
+      <!-- Icono -->
+      <div class="flex justify-center mb-6">
+        <span class="material-symbols-outlined text-5xl text-accent">
+          check_circle
+        </span>
+      </div>
+
+      <!-- Título -->
+      <h1 class="text-2xl font-bold text-[var(--color-primary)]">
+        ¡Gracias por contactarnos!
+      </h1>
+
+      <!-- Texto -->
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Hemos recibido tu información correctamente. Uno de nuestros asesores se
+        comunicará contigo en el menor tiempo posible.
+      </p>
+
+      <!-- Botón -->
+      <a
+        href="/"
+        class="inline-block mt-8 px-6 py-3 rounded-xl bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-secondary)] transition"
+      >
+        Regresar al inicio
+      </a>
+
+      <!-- Mensaje pequeño -->
+      <p class="mt-4 text-sm text-slate-400">
+        Serás redirigido automáticamente en unos segundos…
+      </p>
+    </div>
+  </section>
+
+  <!-- Redirección automática -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 5000);
+  </script>
+</ThanksLayout>
