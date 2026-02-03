@@ -3,7 +3,10 @@ import Image from "astro/components/Image.astro";
 import MainLayout from "../Layouts/MainLayout.astro";
 import institucional from "../../public/3.jpg";
 import ImageSlider from "../components/ImageSlider.astro";
-import { imagenesBienestar, imagenesReconocimientos } from "../common/variables.astro";
+import {
+	imagenesBienestar,
+	imagenesReconocimientos,
+} from "../common/variables.astro";
 ---
 
 <style>
@@ -215,7 +218,7 @@ import { imagenesBienestar, imagenesReconocimientos } from "../common/variables.
 			<!-- Content -->
 			<div>
 				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
-					Bienestar del empleado
+					Bienestar del colaborador
 				</h2>
 
 				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
@@ -241,7 +244,11 @@ import { imagenesBienestar, imagenesReconocimientos } from "../common/variables.
 			<!-- Image -->
 			<!-- Image -->
 			<div class="relative">
-				<ImageSlider imagenes={imagenesBienestar} classes="w-full h-full max-h-[420px] object-cover object-center rounded-3xl shadow-lg" duration="1500"/>
+				<ImageSlider
+					imagenes={imagenesBienestar}
+					classes="w-full h-full max-h-[420px] object-cover object-center rounded-3xl shadow-lg"
+					duration="1500"
+				/>
 			</div>
 		</div>
 	</section>
@@ -275,27 +282,47 @@ import { imagenesBienestar, imagenesReconocimientos } from "../common/variables.
 
 			<!-- Image -->
 			<div class="relative">
-				<ImageSlider imagenes={imagenesReconocimientos} classes="w-full h-full max-h-[420px] object-contain object-center rounded-3xl shadow-lg" duration="2000"/>
+				<ImageSlider
+					imagenes={imagenesReconocimientos}
+					classes="w-full h-full max-h-[420px] object-contain object-center rounded-3xl shadow-lg"
+					duration="2000"
+				/>
 			</div>
 		</div>
 	</section>
 
 	<!-- ======================================================
-     LEGALIDAD Y RESPALDO
+     LICENCIA DE FUNCIOANMIENTO
 ======================================================= -->
-	<section class="bg-white">
-		<div class="max-w-7xl mx-auto px-6 py-20 reveal">
+	<section class="bg-white md:grid md:grid-cols-2">
+		<div class="max-w-7xl pl-10 mx-auto py-10 reveal">
 			<h2 class="text-3xl font-bold text-[var(--color-primary)]">
-				Legalidad y respaldo
+				Licencia No 20194100102537 Supervigilancia
 			</h2>
 
-			<p class="mt-6 max-w-3xl text-slate-600">
-				Con operación nacional, <strong>ASEINTEG LTDA</strong> presta servicios de
-				seguridad privada cumpliendo estrictamente la normativa colombiana, respaldada
-				por licencias vigentes, certificación ISO 9001 y pólizas activas, bajo la
-				supervisión de la Superintendencia de Vigilancia y Seguridad Privada.
-			</p>
+			<ul class="mt-6 space-y-3 text-slate-600">
+				<li>✔ Medios tecnológicos</li>
+				<li>✔ Cerca eléctrica</li>
+				<li>✔ Circuito cerrado de televisión</li>
+				<li>✔ Escolta de personas, vehículos y mercancias</li>
+			</ul>
 		</div>
+
+		<div class="max-w-7xl pl-10 mx-auto py-10 reveal">
+			<h2 class="text-3xl font-bold text-[var(--color-primary)]">Polizas</h2>
+
+			<ul class="mt-6 space-y-3 text-slate-600">
+				<li>✔ Responsabilidad civil contractual</li>
+				<li>✔ Hurto</li>
+				<li>✔ Seguro de vida</li>
+			</ul>
+		</div>
+	</section>
+	<!-- ======================================================
+     LICENCIA DE FUNCIOANMIENTO
+======================================================= -->
+	<section class="bg-white">
+		
 	</section>
 
 	<!-- ======================================================
