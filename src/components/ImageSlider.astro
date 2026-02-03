@@ -1,0 +1,33 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+interface Props {
+  imagenes: string[];
+  classes: string;
+  duration: string
+}
+const { imagenes, classes, duration = 2000 } = Astro.props;
+---
+
+<Swiper
+  class={classes}
+  options={{
+    autoplay: {
+      delay: Number(duration), 
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    loop: true,
+    cssMode: true,
+  }}
+>
+  <SwiperWrapper>
+    {
+      imagenes.map((imagen) => (
+        <SwiperSlide>
+          {" "}
+          <img src={imagen} class={classes} loading="lazy"/>{" "}
+        </SwiperSlide>
+      ))
+    }
+  </SwiperWrapper>
+</Swiper>

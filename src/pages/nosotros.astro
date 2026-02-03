@@ -2,6 +2,8 @@
 import Image from "astro/components/Image.astro";
 import MainLayout from "../Layouts/MainLayout.astro";
 import institucional from "../../public/3.jpg";
+import ImageSlider from "../components/ImageSlider.astro";
+import { imagenesBienestar, imagenesReconocimientos } from "../common/variables.astro";
 ---
 
 <style>
@@ -15,7 +17,12 @@ import institucional from "../../public/3.jpg";
 		transform: translateY(0);
 	}
 </style>
-<MainLayout title="Quiénes Somos | Empresa de seguridad privada con operación nacional | ASEINTEG LTDA" description="Conozca la historia, misión, visión y valores de ASEINTEG LTDA, una empresa colombiana con más de 25 años de experiencia en seguridad privada." canonical="/nosotros" showFooter={false}>
+<MainLayout
+	title="Quiénes Somos | Empresa de seguridad privada con operación nacional | ASEINTEG LTDA"
+	description="Conozca la historia, misión, visión y valores de ASEINTEG LTDA, una empresa colombiana con más de 25 años de experiencia en seguridad privada."
+	canonical="/nosotros"
+	showFooter={false}
+>
 	<!-- ======================================================
      HERO – QUIÉNES SOMOS
 ======================================================= -->
@@ -37,7 +44,9 @@ import institucional from "../../public/3.jpg";
 					Seguridad privada con respaldo real
 				</h2>
 				<p class="mt-6 text-slate-600">
-					Brindamos servicios de vigilancia y seguridad privada a nivel nacional, estructurados para adaptarse a las necesidades residenciales, comerciales, industriales e institucionales.
+					Brindamos servicios de vigilancia y seguridad privada a nivel
+					nacional, estructurados para adaptarse a las necesidades
+					residenciales, comerciales, industriales e institucionales.
 				</p>
 				<p class="mt-4 text-slate-600">
 					Nuestros esquemas de seguridad se estructuran para entornos
@@ -69,11 +78,14 @@ import institucional from "../../public/3.jpg";
 			<!-- Content -->
 			<div>
 				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
-					Nuestra trayectoria
+					Nuestros comienzos
 				</h2>
 
 				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
-					<strong>ASEINTEG LTDA</strong> inició operaciones en Girardot. Gracias a metodologías claras y experiencia acumulada, ha expandido su alcance a lo largo del territorio colombiano, atendiendo distintas regiones con la misma consistencia operativa.
+					<strong>ASEINTEG LTDA</strong> inició operaciones en Girardot. Gracias a
+					metodologías claras y experiencia acumulada, ha expandido su alcance a lo
+					largo del territorio colombiano, atendiendo distintas regiones con la misma
+					consistencia operativa.
 				</p>
 			</div>
 
@@ -84,7 +96,9 @@ import institucional from "../../public/3.jpg";
 					alt="Historia"
 					class="w-full h-full max-h-[420px] object-cover rounded-3xl shadow-lg"
 					loading="lazy"
-				/>
+				/><figcaption class="mt-2 text-center text-sm text-gray-600 italic">
+					Retrato de época
+				</figcaption>
 			</div>
 		</div>
 	</section>
@@ -99,7 +113,10 @@ import institucional from "../../public/3.jpg";
 					Nuestra misión
 				</h3>
 				<p class="mt-4 text-slate-600">
-					Suministrar a nivel nacional los servicios de vigilancia privada integral en la modalidad de vigilancia fija con el propósito de velar por la integridad personal y seguridad de los bienes de las personas o entidades que reciben nuestra protección.
+					Suministrar a nivel nacional los servicios de vigilancia privada
+					integral en la modalidad de vigilancia fija con el propósito de velar
+					por la integridad personal y seguridad de los bienes de las personas o
+					entidades que reciben nuestra protección.
 				</p>
 			</div>
 
@@ -108,7 +125,10 @@ import institucional from "../../public/3.jpg";
 					Nuestra visión
 				</h3>
 				<p class="mt-4 text-slate-600">
-					Ser una empresa altamente competitiva en el sector de la vigilancia y seguridad privada, con altos niveles de calidad en nuestros procesos, para continuar neutralizando eficazmente los intentos delincuenciales, protegiendo a nuestros clientes y sus intereses.
+					Ser una empresa altamente competitiva en el sector de la vigilancia y
+					seguridad privada, con altos niveles de calidad en nuestros procesos,
+					para continuar neutralizando eficazmente los intentos delincuenciales,
+					protegiendo a nuestros clientes y sus intereses.
 				</p>
 			</div>
 		</div>
@@ -128,7 +148,9 @@ import institucional from "../../public/3.jpg";
 				</h2>
 
 				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
-					Nuestro equipo combina experiencia, entrenamiento riguroso y desarrollo continuo para ofrecer un servicio con altos estándares operativos.
+					Nuestro equipo combina experiencia, entrenamiento riguroso y
+					desarrollo continuo para ofrecer un servicio con altos estándares
+					operativos.
 				</p>
 
 				<ul class="mt-6 space-y-3 text-slate-600">
@@ -180,6 +202,80 @@ import institucional from "../../public/3.jpg";
 					class="w-full h-full max-h-[420px] object-cover object-center rounded-3xl shadow-lg"
 					loading="lazy"
 				/>
+			</div>
+		</div>
+	</section>
+	<!-- ======================================================
+     BIENESTAR
+======================================================= -->
+	<section class="bg-white/50">
+		<div
+			class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal"
+		>
+			<!-- Content -->
+			<div>
+				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+					Bienestar del empleado
+				</h2>
+
+				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
+					Creemos que una seguridad sólida empieza por el bienestar de quienes
+					la hacen posible. Por eso promovemos espacios de integración, cercanía
+					y reconocimiento para nuestros colaboradores y sus familias.
+				</p>
+				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
+					Lo hacemos a traves de:
+				</p>
+				<ul class="mt-6 space-y-3 text-slate-600">
+					<li>
+						⚽ Actividades deportivas y recreativas que fortalecen el trabajo en
+						equipo
+					</li>
+					<li>🎉 Encuentros familiares y celebraciones institucionales</li>
+					<li>
+						🤝 Espacios de integración que refuerzan el sentido de pertenencia
+					</li>
+				</ul>
+			</div>
+
+			<!-- Image -->
+			<!-- Image -->
+			<div class="relative">
+				<ImageSlider imagenes={imagenesBienestar} classes="w-full h-full max-h-[420px] object-cover object-center rounded-3xl shadow-lg" duration="1500"/>
+			</div>
+		</div>
+	</section>
+	<!-- ======================================================
+     RECONOCMIENTOS
+======================================================= -->
+	<section class="bg-white/50">
+		<div
+			class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal"
+		>
+			<!-- Content -->
+			<div>
+				<h2 class="text-3xl font-bold text-[var(--color-primary)]">
+					Reconocimientos
+				</h2>
+
+				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
+					Nuestro trabajo ha sido respaldado por reconocimientos y
+					certificaciones que reflejan el compromiso permanente con la calidad,
+					el cumplimiento normativo y la mejora continua.
+				</p>
+				<p class="mt-6 max-w-xl text-slate-600 leading-relaxed">
+					Lo hacemos a traves de:
+				</p>
+				<ul class="mt-6 space-y-3 text-slate-600">
+					<li>🏆 Reconocimientos institucionales</li>
+					<li>📄 Certificaciones y estándares de calidad</li>
+					<li>🤝 Confianza construida con nuestros clientes</li>
+				</ul>
+			</div>
+
+			<!-- Image -->
+			<div class="relative">
+				<ImageSlider imagenes={imagenesReconocimientos} classes="w-full h-full max-h-[420px] object-contain object-center rounded-3xl shadow-lg" duration="2000"/>
 			</div>
 		</div>
 	</section>

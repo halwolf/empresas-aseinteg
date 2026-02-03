@@ -41,7 +41,19 @@ const { title, description, canonical, showFooter } = Astro.props;
   </head>
   <body>
     <Navbar />
-    <slot />
+    <main class="relative overflow-hidden">
+      <!-- Imagen de fondo -->
+      <div
+        class=" bg-[url('/fondos/fondo_vertical.jpg')] md:bg-[url('/fondos/fondo_horizontal.jpg')]  
+        fixed inset-0 -z-10 bg-no-repeat bg-center bg-cover opacity-10"
+        aria-hidden="true"
+      >
+      </div>
+      <!-- Contenido -->
+      <div class="relative z-10">
+        <slot />
+      </div>
+    </main>
     {showFooter && <Footer />}
     <Footer2 />
   </body>

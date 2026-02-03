@@ -26,6 +26,9 @@ importers:
       astro-splide:
         specifier: ^2.0.2
         version: 2.0.2
+      astro-swiper:
+        specifier: ^1.4.0
+        version: 1.4.0
       install:
         specifier: ^0.13.0
         version: 0.13.0
@@ -711,6 +714,9 @@ packages:
 
   astro-splide@2.0.2:
     resolution: {integrity: sha512-R+Jh00OS+iKG5v2DUcc4/J8h3H/PKKGkmx5HQGspn2EokSF2DYpGDO2Kqozl7j2WnZLtFpfYM1loKYCPtIYu3A==}
+
+  astro-swiper@1.4.0:
+    resolution: {integrity: sha512-reIXoT5Zc82Adr99EcuFaFS/Vh1ZyRi3cOC2ta6CDBtVlqQ7MK/603JmcyWzICTQ5l7cNGs6Rkga1qdcEf7rgA==}
 
   astro@5.17.1:
     resolution: {integrity: sha512-oD3tlxTaVWGq/Wfbqk6gxzVRz98xa/rYlpe+gU2jXJMSD01k6sEDL01ZlT8mVSYB/rMgnvIOfiQQ3BbLdN237A==}
@@ -1463,6 +1469,10 @@ packages:
     resolution: {integrity: sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==}
     engines: {node: '>=16'}
     hasBin: true
+
+  swiper@12.1.0:
+    resolution: {integrity: sha512-BD4CpAOOyEvZ2f0CDx362ea+vmOwukVcmbsQx+0BhRIaBUz8wvcCd//E7RFmvBZCrfyqXCHUVqmgUwts6ywlxw==}
+    engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.1.18:
     resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
@@ -2236,6 +2246,10 @@ snapshots:
   astro-splide@2.0.2:
     dependencies:
       '@splidejs/splide': 4.1.4
+
+  astro-swiper@1.4.0:
+    dependencies:
+      swiper: 12.1.0
 
   astro@5.17.1(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3):
     dependencies:
@@ -3375,6 +3389,8 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
       sax: 1.4.4
+
+  swiper@12.1.0: {}
 
   tailwindcss@4.1.18: {}
 
