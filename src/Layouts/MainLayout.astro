@@ -11,13 +11,18 @@ const { title, description, canonical, showFooter } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Metas -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
+    <meta name="robots" content="index, follow" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <!-- Links -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -38,6 +43,28 @@ const { title, description, canonical, showFooter } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+    <!-- SEO STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {`
+      {
+        "@context": "https://schema.org",
+        "@type": "SecurityService",
+        "name": "ASEINTEG LTDA",
+        "areaServed": "CO",
+        "serviceType": "Vigilancia y Seguridad Privada",
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CO"
+            }
+          }
+        }
+      }
+      `}
+    </script>
   </head>
   <body>
     <Navbar />
