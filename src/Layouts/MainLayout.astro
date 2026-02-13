@@ -44,34 +44,33 @@ const { title, description, canonical, showFooter } = Astro.props;
       rel="stylesheet"
     />
     <!-- SEO STRUCTURED DATA -->
-    <script type="application/ld+json">
-      {`
-      {
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "SecurityService",
-        "name": "ASEINTEG LTDA",
-        "areaServed": "CO",
-        "serviceType": "Vigilancia y Seguridad Privada",
-        "availableChannel": {
+        name: "ASEINTEG LTDA",
+        areaServed: "CO",
+        serviceType: "Vigilancia y Seguridad Privada",
+        availableChannel: {
           "@type": "ServiceChannel",
-          "serviceLocation": {
+          serviceLocation: {
             "@type": "Place",
-            "address": {
+            address: {
               "@type": "PostalAddress",
-              "addressCountry": "CO"
-            }
-          }
-        }
-      }
-      `}
-    </script>
+              addressCountry: "CO",
+            },
+          },
+        },
+      })}
+    />
   </head>
   <body>
     <Navbar />
     <main class="relative overflow-hidden">
       <!-- Imagen de fondo -->
       <div
-        class=" bg-[url('/fondos/fondo_vertical.jpg')] md:bg-[url('/fondos/fondo_horizontal.jpg')]  
+        class="bg-[url('/fondos/fondo_vertical.jpg')] md:bg-[url('/fondos/fondo_horizontal.jpg')]
         fixed inset-0 -z-10 bg-no-repeat bg-center bg-cover opacity-10"
         aria-hidden="true"
       >
